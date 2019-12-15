@@ -4,6 +4,9 @@ files:
   - source: /
     destination: /var/api/
 hooks:
+  Install:
+    - location: scripts/npm.sh
+      runas: root     
   AfterInstall:
     - location: scripts/npm-install.sh
       runas: root
